@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Browskii and MOMO - Clinic Growth Plan</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#071E1C; --teal:#0A2A28; --teal2:#0E3D3A; --card:#0F3431; --line:#1C4A46;
+    --mint:#00D4BC; --mint-soft:#7FE8DA; --cream:#F4F1EA; --muted:#9FB8B3; --peach:#F5C7A0;
+    --green:#4CAF7D; --red:#E07A7A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--teal);color:var(--cream);font-family:'Open Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Montserrat',sans-serif;font-weight:300;letter-spacing:.3px;line-height:1.2}
+  em{font-style:italic}
+  .mint{color:var(--mint-soft)}
+  .muted{color:var(--muted)}
+  .eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--mint);font-weight:600;font-family:'Montserrat',sans-serif}
+
+  header.hero{padding:90px 0 70px;text-align:center;border-bottom:1px solid var(--line);
+    background:radial-gradient(ellipse at top,rgba(0,212,188,.12),transparent 60%),linear-gradient(180deg,var(--deep),var(--teal))}
+  header.hero h1{font-size:46px;margin:18px 0 14px}
+  header.hero .sub{font-size:19px;color:var(--muted);max-width:660px;margin:0 auto}
+  .divider{width:60px;height:2px;background:var(--mint);margin:26px auto}
+
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  section:nth-of-type(even){background:var(--teal2)}
+  section h2{font-size:32px;margin-bottom:10px}
+  section .lead{font-size:18px;color:var(--muted);margin-bottom:34px;max-width:720px}
+
+  .verdict{background:var(--deep);border:1px solid var(--line);border-left:3px solid var(--mint);
+    border-radius:6px;padding:28px 30px;margin:30px 0;font-size:16.5px}
+  .verdict strong{color:var(--mint-soft);font-weight:600}
+  blockquote{border-left:2px solid var(--mint);padding:6px 0 6px 20px;margin:22px 0;color:var(--cream);font-style:italic;font-size:17px}
+  blockquote span{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:6px}
+
+  .bignums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+  .bignum{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 20px;text-align:center}
+  .bignum .n{font-size:38px;color:var(--mint-soft);font-weight:300;line-height:1;font-family:'Montserrat',sans-serif}
+  .bignum .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:10px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:26px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px 24px}
+  .tile h3{font-size:17px;color:var(--mint-soft);margin-bottom:8px;font-weight:600}
+  .tile p{font-size:14.5px;color:#D9E3E0}
+  .tag{display:inline-block;background:rgba(0,212,188,.12);color:var(--mint-soft);font-size:11px;
+    padding:3px 9px;border-radius:20px;margin:3px 4px 3px 0;letter-spacing:.5px}
+
+  .step{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border:none}
+  .step .num{flex:none;width:44px;height:44px;border:1px solid var(--mint);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--mint-soft);font-size:18px;font-family:'Montserrat',sans-serif}
+  .step h3{font-size:19px;margin-bottom:6px}
+  .step p{font-size:15px;color:#D9E3E0}
+
+  .path{background:linear-gradient(160deg,#0F3B37,#071E1C);border:1px solid var(--mint);border-radius:10px;padding:36px;margin-top:30px}
+  .path h3{color:var(--mint-soft);font-size:22px;margin-bottom:8px}
+  .days{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:22px 0}
+  .day{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:20px}
+  .day .d{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);font-family:'Montserrat',sans-serif;font-weight:600}
+  .day h4{font-family:'Montserrat',sans-serif;font-weight:600;font-size:16px;margin:8px 0 6px}
+  .day p{font-size:14px;color:#D9E3E0}
+
+  .cta{text-align:center;padding:70px 0}
+  .cta h2{font-size:34px;margin-bottom:14px}
+  .btn{display:inline-block;background:var(--mint);color:#071E1C;text-decoration:none;
+    padding:15px 40px;border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    font-size:14px;margin-top:20px;font-family:'Montserrat',sans-serif}
+  footer{text-align:center;padding:40px 0 60px;color:var(--muted);font-size:13px}
+  ul.clean{list-style:none;margin-top:16px}
+  ul.clean li{padding:8px 0 8px 26px;position:relative;color:#D9E3E0;font-size:15px}
+  ul.clean li:before{content:'✦';position:absolute;left:0;color:var(--mint)}
+
+  @media(max-width:720px){
+    .grid2,.grid3,.bignums,.days{grid-template-columns:1fr}
+    header.hero h1{font-size:34px}
+    section h2{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Clinic Growth Plan</div>
+    <h1>Browskii and MOMO</h1>
+    <div class="divider"></div>
+    <p class="sub">The clear path from where you are now to a skin-led clinic that fills itself - without an agency, and without you answering every DM.</p>
+    <p class="muted" style="margin-top:24px;font-size:13px">Prepared for Ashleigh Hou by Kelly Wotherspoon and Alicia Hagen &middot; Clinic Catalyst &middot; September 2026</p>
+  </div>
+</header>
+
+<!-- STARTING POINT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Where you're starting from</div>
+    <h2>You built Brisbane's OG cosmetic tattoo name. Now the skin side wants to be its own brand.</h2>
+    <p class="lead">Browskii is one of the most in-demand brow studios in Brisbane, with a team of eight, a Newstead space you designed yourself, a 4.9 Google rating and an audience of 13,000 people who trust you with their face. That took years. The next chapter is already showing up in your bookings.</p>
+
+    <div class="bignums">
+      <div class="bignum"><div class="n">8</div><div class="l">people on your team</div></div>
+      <div class="bignum"><div class="n">4.9</div><div class="l">Google rating, 168 reviews</div></div>
+      <div class="bignum"><div class="n">13K</div><div class="l">Instagram following</div></div>
+    </div>
+
+    <blockquote>"Even when my nurse was here, she is actually booked for more skin treatments than injectable treatments."<span>Ashleigh, scoping call, 7 September 2026</span></blockquote>
+
+    <div class="verdict">
+      The plan is about one thing: <strong>taking you from around $80K a month to $120K by growing skin</strong>, without relying on an injector to get there. You told us the brow team is already cross-referring, memberships and custom treatment plans are selling, and the rosacea work is the part that lights you up. Nothing here is a reinvention. It's putting a system underneath what already works so it happens every day instead of when someone remembers.
+    </div>
+  </div>
+</section>
+
+<!-- THE INSIGHT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The gold mine</div>
+    <h2>Your competitors don't talk about rosacea. You do, and you love it.</h2>
+    <p class="lead">Newstead is dense with aesthetics clinics, and the injectables leaders have been there for years. That fight is expensive. Rosacea and redness is a different fight, and right now almost nobody in your suburb is leading with it.</p>
+
+    <blockquote>"They went to a doctor, they got prescribed drugs, but they don't really want to take that, and then managed to actually get to normal skin."<span>Ashleigh, on her rosacea clients</span></blockquote>
+
+    <div class="grid2">
+      <div class="tile">
+        <h3>Why this works as a funnel</h3>
+        <p>Rosacea clients know one treatment won't fix it. They arrive expecting a journey, they buy custom treatment plans, and they stay on product. That is exactly the client who takes a clinic from $80K to $120K.</p>
+      </div>
+      <div class="tile">
+        <h3>Why MOMO needs its own name</h3>
+        <p>You've already seen skin and injectables get no traction on the Browskii page. Finishing the MOMO rebrand, with the new burgundy and blue identity, gives the skin journey a home that doesn't confuse a brow audience.</p>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:22px;font-size:14px">Concern-led always. We lead with "redness that won't settle", "my skin flushes at everything", "I don't want to be on medication for my face". The device names stay in the consult room.</p>
+  </div>
+</section>
+
+<!-- QUICK WINS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Quick wins - things you can do this week</div>
+    <h2>Free, fast, and already discussed on the call.</h2>
+    <p class="lead">None of this needs us. These are the small moves that start the skin engine before a single ad runs.</p>
+
+    <div class="grid2">
+      <div class="tile">
+        <h3>$50 for every brow-to-skin referral</h3>
+        <p>Your brow team is already cross-referring. Make it official: a $50 gift card for every new skin client a brow artist books in. Skin clients never buy one treatment, so the $50 disappears inside the first plan they take.</p>
+      </div>
+      <div class="tile">
+        <h3>Two small website fixes</h3>
+        <p>The Stellar M22 IPL link in your menu returns a "page not found", and the word "specialist" appears on the homepage and cosmetic tattoo page. AHPRA reserves that word for specialist-registered practitioners. Swap to "has a special interest in" and reconnect the IPL page.</p>
+      </div>
+      <div class="tile">
+        <h3>Pin the rosacea story</h3>
+        <p>Your social manager's own rosacea journey is the most believable ad you will ever run. Pin it on MOMO, and make the UGC rosacea ad the one that stays on while the others rotate.</p>
+      </div>
+      <div class="tile">
+        <h3>Lock the next VIP night now</h3>
+        <p>Pick a date this quarter and build it around the new skin tightening device arriving. Alicia is sending you a simple VIP run sheet that doesn't rely on a rep showing up: demo, two raffles people must be present for, limited packages, and a bow on every package sold.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLAN -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The plan</div>
+    <h2>Three marketing moves. Three systems. That's the whole thing.</h2>
+    <p class="lead">Clinics stall when they try to do fifteen things. This is the six that matter for Browskii and MOMO this year.</p>
+
+    <p class="eyebrow" style="margin-top:10px">Marketing</p>
+    <div class="grid3">
+      <div class="tile">
+        <h3>1. The rosacea funnel on Meta</h3>
+        <p>A lead-form campaign, not a "straight to bookings" one. Concern-led hooks, the UGC story, a skin discovery session as the offer, and every lead landing in a CRM where it gets followed up. Run under MOMO so the brow audience isn't confused.</p>
+      </div>
+      <div class="tile">
+        <h3>2. Google that finally shows Newstead you exist</h3>
+        <p>Your site was built five years ago and has only had pages added since. We refresh the SEO foundations so "Newstead skin treatment" and "Newstead injectables" start returning you, and set up Google Ads for people already searching cosmetic tattoo, lip blush and skin in Brisbane.</p>
+      </div>
+      <div class="tile">
+        <h3>3. A MOMO landing page in the new brand</h3>
+        <p>Kelly is mocking up a concern-led landing page in your new burgundy and blue identity so you can see what the skin journey looks like when the website matches the brand. This is the page the ads land on.</p>
+      </div>
+    </div>
+
+    <p class="eyebrow" style="margin-top:36px">Systems</p>
+    <div class="grid3">
+      <div class="tile">
+        <h3>1. A CRM with every lead tracked</h3>
+        <p>Right now ads go straight to Acuity and nobody knows who enquired and didn't book. Every lead, DM and form gets a record, a follow-up sequence and a booked-or-not status. You see it on one screen.</p>
+      </div>
+      <div class="tile">
+        <h3>2. An assistant on your inbox and DMs</h3>
+        <p>Whoever-gets-to-it-first becomes a trained assistant in your voice that answers the FAQs already on your site, pre-frames the deposit and late-arrival policy, and sends the booking link. Sundays stop being yours.</p>
+      </div>
+      <div class="tile">
+        <h3>3. Rebooking and product on autopilot</h3>
+        <p>Your price list already has the refresh windows (6 to 12 months, 13 to 18 months). The system chases them. It also knows when a client's product runs out and invites them back in, and it sends the review request after every appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 90 DAYS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The first 90 days</div>
+    <h2>Revenue first, then capture, then scale.</h2>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div>
+        <h3>Days 1 to 30: money already in your database</h3>
+        <p>Export the Acuity client list. Everyone in a refresh window gets a warm message. Every brow client gets a skin discovery invitation. The referral bonus goes live with the team. The assistant goes on the inbox.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div>
+        <h3>Days 30 to 60: capture</h3>
+        <p>The MOMO landing page and lead form go live, the rosacea funnel starts on Meta, the CRM follow-up sequence runs behind it, and the review request switches on.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div>
+        <h3>Days 60 to 90: scale</h3>
+        <p>Google Ads and the SEO refresh go live, the first quarterly VIP night runs with the new device, and the monthly newsletter goes out across both brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATH FORWARD -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Your path forward</div>
+    <h2>Everything above gets built with you, in three days, in Brisbane.</h2>
+    <p class="lead">You said the thing that scares you is the gap while skin catches up. The workshop closes that gap in one hit: you leave with the CRM, the assistant, the rosacea campaign and Google all set up and running in the background, and you own every piece of it.</p>
+
+    <div class="path">
+      <h3>Clinic Catalyst Brisbane Workshop &middot; 26 to 28 October 2026</h3>
+      <p class="muted">Capped at 10 clinics. Bring your laptop. Bring a team member if you'd like the person who runs your inbox in the room.</p>
+      <div class="days">
+        <div class="day"><div class="d">Day one</div><h4>Your assistant and CRM</h4><p>Trained on your voice, your policies and your FAQs. AHPRA-safe by default. Lead tracking, follow-up and rebooking sequences built live.</p></div>
+        <div class="day"><div class="d">Day two</div><h4>Meta</h4><p>The rosacea funnel built end to end: hooks, lead form, landing page, nurture. You learn to switch offers on and off seasonally.</p></div>
+        <div class="day"><div class="d">Day three</div><h4>Google</h4><p>Search ads and the SEO foundations set up properly once, so they run quietly in the background for the year.</p></div>
+      </div>
+      <ul class="clean">
+        <li>30 days of support after the workshop for anything that needs a second set of hands.</li>
+        <li>You own the system. Your accounts, your subscriptions, your IP. We don't hold anything.</li>
+        <li>No agency retainer. No lock-in.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <div class="eyebrow">Next step</div>
+    <h2>Let's get you to $120K on skin.</h2>
+    <p class="muted" style="max-width:580px;margin:0 auto">Have a scroll through this with a coffee, then reply to the email with any questions. The workshop details and the spot reservation are on the page below. We'll walk you through all of it together.</p>
+    <a class="btn" href="https://www.cliniccatalyst.com.au/ccworkshop">Brisbane workshop details</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Kelly Wotherspoon and Alicia Hagen &middot; Clinic Catalyst &middot; cliniccatalyst.com.au<br>
+    Based on our scoping call on 7 September 2026 and a review of browskii.com.au and your socials.
+  </div>
+</footer>
+
+</body>
+</html>

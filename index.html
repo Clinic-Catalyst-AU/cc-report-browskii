@@ -26,12 +26,15 @@ body { font-family:'Open Sans',sans-serif; background:#000; color:var(--white); 
 .slide { height:100vh; scroll-snap-align:start; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
 .slide-img { padding:0; }
 .slide-img img { width:100%; height:100%; object-fit:contain; background:#000; }
-.slide-html { padding:3rem 4rem; background:var(--dark); }
+.slide-html { padding:clamp(2.2rem,4.4vh,3.6rem) clamp(2rem,4.5vw,4.5rem) 3.4rem; background:var(--dark); }
 .slide-html.alt { background:var(--dark-alt); }
 .slide-html.teal-bg { background:linear-gradient(135deg, #073B36 0%, #0A2A28 100%); }
 .slide-html { background:linear-gradient(160deg, #0A2A28 0%, #0E3D3A 40%, #0A2A28 100%); }
 .slide-html.alt { background:linear-gradient(160deg, #0D3D38 0%, #0A2A28 50%, #0D3D38 100%); }
-.inner { max-width:1100px; width:100%; position:relative; z-index:2; }
+.inner { max-width:1100px; width:100%; position:relative; z-index:2; max-height:100%; }
+.cols2 { columns:2; column-gap:2.4rem; }
+.cols2 > * { break-inside:avoid; -webkit-column-break-inside:avoid; }
+@media (max-width:900px){ .cols2 { columns:1; } }
 .dot-overlay { position:absolute; inset:0; opacity:0.05; background-image:radial-gradient(circle,var(--teal) 1px,transparent 1px); background-size:50px 50px; pointer-events:none; }
 .glow { position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(0,180,160,0.12) 0%,transparent 70%); pointer-events:none; }
 .glow-tl { top:-200px; left:-200px; }
@@ -226,17 +229,17 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
 <section class="slide slide-html" data-editable="true">
   <div class="glow glow-tl"></div>
   <div class="inner">
-    <div class="split">
+    <div class="split" style="grid-template-columns:3fr 2fr; gap:2.4rem;">
       <div>
         <span class="task-num">Task Two</span>
         <h2>Website & <span class="teal">SEO</span></h2>
         <div class="quote"><p>"If we were to say Google Newstead skin treatment, we probably don't come up."</p></div>
         <ul style="list-style:none; padding:0; margin:0;">
-          <li style="display:flex; gap:0.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:0.4rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Plug the tracking in first. Your Meta pixel is already on the site. Add the Google tag beside it: Squarespace Settings, Developer tools, paste the Google Analytics and Ads IDs. Five minutes, and from then on every post, boost and ad shows you what it did.</li>
-          <li style="display:flex; gap:0.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:0.4rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Own Newstead in search this month. Put "Newstead" in the page title, the H1 and the first line of the skin page, then give IPL, skin needling, skin tightening and rosacea treatment a page each with the suburb in the title. Add the five services to your Google Business Profile, ask every skin client for a review that names the treatment, and match the footer address to Google to the letter. All in Squarespace page settings, no developer.</li>
-          <li style="display:flex; gap:0.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:0.4rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Define the journey and show it on every page: Tell me about your skin (60 seconds), then your at-home plan by text and email, then a skin consultation at MOMO, then your plan for your skin, then Aglow to keep it. Today the site has a Book button and nothing between a visitor and a calendar. This gives her a next step at every stage.</li>
-          <li style="display:flex; gap:0.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:0.4rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Two five-minute fixes: point the Stellar M22 IPL menu link at a live page, and swap "specialist" on the homepage and tattoo page for "has a special interest in" so every word is AHPRA-safe.</li>
-          <li style="display:flex; gap:0.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:0.4rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> <span>Put the new MOMO brand on the skin pages: swap the logo and colours in Design, Site styles, once the brand files land, and add a lead capture above the Acuity button (a Squarespace form block, or the assessment link) so people can raise their hand before they book. <a href="https://clinic-catalyst-au.github.io/browskii/momo.html" target="_blank" style="color:var(--teal-bright);">See the MOMO mockup &#8594;</a></span></li>
+          <li style="display:flex; gap:0.5rem; font-size:0.74rem; color:var(--text-mid); line-height:1.45; margin-bottom:0.5rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Plug the tracking in first. Your Meta pixel is already on the site. Add the Google tag beside it: Squarespace Settings, Developer tools, paste the Google Analytics and Ads IDs. Five minutes, and from then on every post, boost and ad shows you what it did.</li>
+          <li style="display:flex; gap:0.5rem; font-size:0.74rem; color:var(--text-mid); line-height:1.45; margin-bottom:0.5rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Own Newstead in search this month. Put "Newstead" in the page title, the H1 and the first line of the skin page, then give IPL, skin needling, skin tightening and rosacea treatment a page each with the suburb in the title. Add the five services to your Google Business Profile, ask every skin client for a review that names the treatment, and match the footer address to Google to the letter. All in Squarespace page settings, no developer.</li>
+          <li style="display:flex; gap:0.5rem; font-size:0.74rem; color:var(--text-mid); line-height:1.45; margin-bottom:0.5rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Define the journey and show it on every page: Tell me about your skin (60 seconds), then your at-home plan by text and email, then a skin consultation at MOMO, then your plan for your skin, then Aglow to keep it. Today the site has a Book button and nothing between a visitor and a calendar. This gives her a next step at every stage.</li>
+          <li style="display:flex; gap:0.5rem; font-size:0.74rem; color:var(--text-mid); line-height:1.45; margin-bottom:0.5rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Two five-minute fixes: point the Stellar M22 IPL menu link at a live page, and swap "specialist" on the homepage and tattoo page for "has a special interest in" so every word is AHPRA-safe.</li>
+          <li style="display:flex; gap:0.5rem; font-size:0.74rem; color:var(--text-mid); line-height:1.45; margin-bottom:0.5rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> <span>Put the new MOMO brand on the skin pages: swap the logo and colours in Design, Site styles, once the brand files land, and add a lead capture above the Acuity button (a Squarespace form block, or the assessment link) so people can raise their hand before they book. <a href="https://clinic-catalyst-au.github.io/browskii/momo.html" target="_blank" style="color:var(--teal-bright);">See the MOMO mockup &#8594;</a></span></li>
         </ul>
       </div>
       <div>
@@ -737,16 +740,27 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
 
 <!-- ========== WHAT THE AIOS SKILLS REALLY DO ========== -->
 <style>
-.sk-list{margin-top:1rem}
-.sk-row{display:flex;gap:1rem;padding:0.55rem 0;border-top:1px solid rgba(255,255,255,0.07);opacity:0;transform:translateY(14px)}
+.sk-list{margin-top:0.9rem;display:grid;grid-template-columns:1fr 1fr;gap:0 2.2rem}
+@media (max-width:900px){.sk-list{grid-template-columns:1fr}}
+.sk-row{display:flex;gap:0.8rem;padding:0.5rem 0;border-top:1px solid rgba(255,255,255,0.07);opacity:0;transform:translateY(14px)}
 .is-live .sk-row{animation:skIn .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d)}
 @keyframes skIn{to{opacity:1;transform:none}}
 .sk-n{font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:900;color:rgba(0,212,188,0.35);flex:0 0 34px;line-height:1.2}
 .sk-b h4{font-size:0.9rem;margin:0;color:var(--peach)}
 .sk-sub{font-family:'Montserrat',sans-serif;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-bright);margin:0.2rem 0 0.3rem}
-.sk-p{font-size:0.72rem;color:var(--text-mid);line-height:1.4;margin:0;max-width:74ch}
+.sk-p{font-size:0.7rem;color:var(--text-mid);line-height:1.4;margin:0}
 .sk-chips{margin-top:0.35rem;display:flex;flex-wrap:wrap;gap:0.3rem}
 .sk-chips .sk{font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:0.06em;color:var(--text-faint);border:1px solid rgba(255,255,255,0.12);border-radius:3px;padding:0.15rem 0.4rem}
+
+.sk-ic{width:30px;height:30px;flex:0 0 30px;border-radius:50%;border:1px solid rgba(0,212,188,.35);display:flex;align-items:center;justify-content:center;background:rgba(0,212,188,.07)}
+.sk-ic svg{width:16px;height:16px;fill:none;stroke:var(--teal-bright);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.is-live .sk-ic{animation:skSpin .8s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d)}
+@keyframes skSpin{0%{transform:scale(.6) rotate(-25deg);opacity:0}100%{transform:none;opacity:1}}
+.sk-ic svg .dash{stroke-dasharray:44;stroke-dashoffset:44}
+.is-live .sk-ic svg .dash{animation:skDraw 1s ease forwards;animation-delay:calc(var(--d) + 200ms)}
+@keyframes skDraw{to{stroke-dashoffset:0}}
+.sk-lib{margin-top:0.7rem;display:flex;align-items:center;gap:0.55rem;font-size:0.74rem;color:var(--text-mid);flex-wrap:wrap}
+.sk-lib a{color:var(--teal-bright);border-bottom:1px solid var(--teal-bright);text-decoration:none;padding-bottom:1px}
 .sk-foot{margin-top:0.6rem;font-size:0.76rem;color:var(--text-mid);display:flex;align-items:center;gap:0.6rem}
 .sk-pulse{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);flex-shrink:0;animation:trkPulse 1.8s ease-in-out infinite}
 </style>
@@ -760,6 +774,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
     <div class="sk-list">
       <div class="sk-row" style="--d:0ms">
         <span class="sk-n">01</span>
+        <span class="sk-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span>
         <div class="sk-b">
           <h4>Your voice, captured once</h4>
           <p class="sk-sub">Business Brain, brand guide, voice foundation, resonance messaging</p>
@@ -769,6 +784,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
       </div>
       <div class="sk-row" style="--d:140ms">
         <span class="sk-n">02</span>
+        <span class="sk-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M10 8.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/><path d="M7 21h10"/></svg></span>
         <div class="sk-b">
           <h4>Content, written and scheduled</h4>
           <p class="sk-sub">Content engine, reels, carousels, scripts, covers, social scheduling</p>
@@ -778,6 +794,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
       </div>
       <div class="sk-row" style="--d:280ms">
         <span class="sk-n">03</span>
+        <span class="sk-ic"><svg viewBox="0 0 24 24"><path d="M3 8h13l4 4-4 4H3z"/><path d="M7 12h6"/></svg></span>
         <div class="sk-b">
           <h4>Campaigns, creative to copy</h4>
           <p class="sk-sub">Meta and Google ad builders, ad spy, keyword research, lead forms</p>
@@ -787,6 +804,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
       </div>
       <div class="sk-row" style="--d:420ms">
         <span class="sk-n">04</span>
+        <span class="sk-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
         <div class="sk-b">
           <h4>The follow-up that never forgets</h4>
           <p class="sk-sub">Newsletter engine, follow-up ladder, nurture, reactivation, thank-you pages</p>
@@ -796,6 +814,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
       </div>
       <div class="sk-row" style="--d:560ms">
         <span class="sk-n">05</span>
+        <span class="sk-ic"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H9l-4 4z"/><circle cx="9" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="12.5" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r="1" fill="currentColor" stroke="none"/></svg></span>
         <div class="sk-b">
           <h4>Pages and agents that answer</h4>
           <p class="sk-sub">Landing pages, website audit, SEO and GEO, Aria the conversational agent</p>
@@ -804,7 +823,8 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
         </div>
       </div>
     </div>
-    <div class="sk-foot"><span class="sk-pulse"></span><span>The library comes home with you. You run it yourself, in your own accounts, for as long as you like.</span></div>
+    <div class="sk-foot"><span class="sk-pulse"></span><span>The library comes home with you. You run it yourself, in your own accounts, for as long as you like.</span>
+    <div class="sk-lib"><span>Want to look inside before you decide?</span> <a href="https://clinic-catalyst-au.github.io/cc-skill-library/" target="_blank">Browse the skill library</a> <span style="color:var(--text-faint);">&middot; every skill, what it does, and what it produces</span></div>
   </div>
 </section>
 
@@ -817,7 +837,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
     <h2>What We Track, <span class="teal">Every Week</span></h2>
     <p style="max-width:820px; margin-top:0.6rem; font-size:0.84rem;">One screen, every Monday, so the question stops being "how did we go" and becomes "where is the gap this week". The numbers below are an example week, not your real figures.</p>
     <div class="trk"><div class="trk-col"><h5>Money</h5><div class="trk-m"><div class="lab"><span>Weekly revenue</span><b>$24.6k</b></div><div class="trk-bar"><i style="--w:86%; transition-delay:0ms"></i></div></div><div class="trk-m"><div class="lab"><span>Average client spend</span><b>$118</b></div><div class="trk-bar"><i style="--w:64%; transition-delay:90ms"></i></div></div><div class="trk-m"><div class="lab"><span>Membership revenue</span><b>$3.6k</b></div><div class="trk-bar"><i style="--w:48%; transition-delay:180ms"></i></div></div><div class="trk-m"><div class="lab"><span>Retail and homecare</span><b>$5.1k</b></div><div class="trk-bar"><i style="--w:41%; transition-delay:270ms"></i></div></div><div class="trk-m"><div class="lab"><span>VIP event revenue</span><b>$8.2k</b></div><div class="trk-bar"><i style="--w:57%; transition-delay:360ms"></i></div></div></div><div class="trk-col"><h5>Leads</h5><div class="trk-m"><div class="lab"><span>New leads</span><b>74</b></div><div class="trk-bar"><i style="--w:78%; transition-delay:60ms"></i></div></div><div class="trk-m"><div class="lab"><span>Cost per lead</span><b>$14</b></div><div class="trk-bar"><i style="--w:36%; transition-delay:150ms"></i></div></div><div class="trk-m"><div class="lab"><span>Google leads and bookings</span><b>31</b></div><div class="trk-bar"><i style="--w:62%; transition-delay:240ms"></i></div></div><div class="trk-m"><div class="lab"><span>Meta leads and bookings</span><b>43</b></div><div class="trk-bar"><i style="--w:71%; transition-delay:330ms"></i></div></div><div class="trk-m"><div class="lab"><span>Skin consultations booked</span><b>22</b></div><div class="trk-bar"><i style="--w:55%; transition-delay:420ms"></i></div></div></div><div class="trk-col"><h5>Conversion</h5><div class="trk-m"><div class="lab"><span>Lead to booking</span><b>38%</b></div><div class="trk-bar"><i style="--w:38%; transition-delay:120ms"></i></div></div><div class="trk-m"><div class="lab"><span>Brow to skin</span><b>17%</b></div><div class="trk-bar"><i style="--w:17%; transition-delay:210ms"></i></div></div><div class="trk-m"><div class="lab"><span>Consult to treatment</span><b>64%</b></div><div class="trk-bar"><i style="--w:64%; transition-delay:300ms"></i></div></div><div class="trk-m"><div class="lab"><span>Aglow memberships sold</span><b>6</b></div><div class="trk-bar"><i style="--w:44%; transition-delay:390ms"></i></div></div><div class="trk-m"><div class="lab"><span>Assessment completions</span><b>51</b></div><div class="trk-bar"><i style="--w:68%; transition-delay:480ms"></i></div></div></div><div class="trk-col"><h5>Retention</h5><div class="trk-m"><div class="lab"><span>Rebooking rate</span><b>72%</b></div><div class="trk-bar"><i style="--w:72%; transition-delay:150ms"></i></div></div><div class="trk-m"><div class="lab"><span>Reactivated clients</span><b>19</b></div><div class="trk-bar"><i style="--w:46%; transition-delay:240ms"></i></div></div><div class="trk-m"><div class="lab"><span>Lapsed, 6 months plus</span><b>134</b></div><div class="trk-bar"><i style="--w:61%; transition-delay:330ms"></i></div></div><div class="trk-m"><div class="lab"><span>Repeat skin clients</span><b>58%</b></div><div class="trk-bar"><i style="--w:58%; transition-delay:420ms"></i></div></div><div class="trk-m"><div class="lab"><span>Reviews this week</span><b>11</b></div><div class="trk-bar"><i style="--w:39%; transition-delay:510ms"></i></div></div></div></div>
-    <div class="trk-foot"><span class="trk-dot"></span><span>Then we can see where the gaps are, every week. A number that stalls tells us which part of the machine to fix, before it costs you a month.</span></div>
+    <div class="trk-foot"><span class="trk-dot"></span><span>We teach you what each number means, so when one stalls you know which part of the machine to tweak. After that it is simply maths, and the guessing stops.</span></div>
   </div>
 </section>
 
@@ -832,15 +852,15 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
         <p style="margin-bottom:1.5rem;">Everything in this plan gets built with you, in the room, over three days. You said the scary part is the gap while skin catches up. This closes it in one hit, and you own every piece.</p>
         <div class="faq-item">
           <p class="faq-q">Day 1 - AI Systems Install &middot; Day 2 - Meta Ads Campaign &middot; Day 3 - Google Ads</p>
-          <p class="faq-a">Day one: CRM, the assistant on your inbox, the follow-up ladder, refresh recall, Aglow reviews and the VIP 48-hour sequence installed and running. Day two: the redness campaign built and launched with the landing page and tracking underneath it, leads already coming through during the workshop. Day three: Google Search live on the Newstead terms. Keys handed over.</p>
+          <p class="faq-a" style="font-size:0.74rem; line-height:1.45;">Day one: CRM, the assistant on your inbox, the follow-up ladder, refresh recall, Aglow reviews and the VIP 48-hour sequence installed and running. Day two: the redness campaign built and launched with the landing page and tracking underneath it, leads already coming through during the workshop. Day three: Google Search live on the Newstead terms. Keys handed over.</p>
         </div>
         <div class="faq-item">
           <p class="faq-q">After the room</p>
-          <p class="faq-a">Your 30-skill Claude library comes home with you for content, ads and follow-up, and we stay beside you for 30 days while it all settles in.</p>
+          <p class="faq-a" style="font-size:0.74rem; line-height:1.45;">Your 30-skill Claude library comes home with you for content, ads and follow-up, and we stay beside you for 30 days while it all settles in.</p>
         </div>
         <div class="faq-item">
           <p class="faq-q">Where and when?</p>
-          <p class="faq-a">Brisbane, <strong style="color:var(--peach);">26 to 28 October 2026</strong>. Ten seats, so both of us can sit beside every clinic. Bring a team member if you want the person who runs your inbox in the room. Payment plans available. Deposit $500 + GST.</p>
+          <p class="faq-a" style="font-size:0.74rem; line-height:1.45;">Brisbane, <strong style="color:var(--peach);">26 to 28 October 2026</strong>. Ten seats, so both of us can sit beside every clinic. Bring a team member if you want the person who runs your inbox in the room. Payment plans available. Deposit $500 + GST.</p>
         </div>
       </div>
       <div>
@@ -852,7 +872,7 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
           <div class="price-tag" style="font-size:1.6rem;">$500 <span style="font-size:0.8rem; color:var(--text-faint); font-weight:400;">+ GST deposit</span></div>
           <p style="font-size:0.7rem; color:var(--text-faint); margin-top:0.2rem;">Balance before the workshop &middot; additional attendee from your clinic $300</p>
           <div style="margin-top:0.9rem; padding:0.7rem 0.8rem; border:1px solid var(--teal-bright); border-radius:6px; background:rgba(0,212,188,0.06);"><p style="font-family:'Montserrat',sans-serif; font-size:0.62rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal-bright);">No ongoing fees</p><p style="font-size:0.7rem; color:var(--text-mid); line-height:1.4; margin-top:0.3rem;">Once it is installed the system is yours. You own it and you drive it. If you want us for ad hoc strategy later we are happy to help, and you are never locked into anything.</p></div>
-          <ul class="includes-list">
+          <ul class="includes-list" style="font-size:0.72rem;">
             <li>CRM, landing pages and lead capture, live</li>
             <li>Assistant on DMs, email and missed calls</li>
             <li>Redness and rosacea Meta campaign, launched</li>

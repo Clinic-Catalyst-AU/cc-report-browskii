@@ -735,6 +735,79 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
 @media (max-width:900px){.trk{grid-template-columns:repeat(2,1fr)}}
 </style>
 
+<!-- ========== WHAT THE AIOS SKILLS REALLY DO ========== -->
+<style>
+.sk-list{margin-top:1rem}
+.sk-row{display:flex;gap:1rem;padding:0.72rem 0;border-top:1px solid rgba(255,255,255,0.07);opacity:0;transform:translateY(14px)}
+.is-live .sk-row{animation:skIn .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d)}
+@keyframes skIn{to{opacity:1;transform:none}}
+.sk-n{font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:900;color:rgba(0,212,188,0.35);flex:0 0 34px;line-height:1.2}
+.sk-b h4{font-size:0.9rem;margin:0;color:var(--peach)}
+.sk-sub{font-family:'Montserrat',sans-serif;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-bright);margin:0.2rem 0 0.3rem}
+.sk-p{font-size:0.75rem;color:var(--text-mid);line-height:1.45;margin:0;max-width:74ch}
+.sk-chips{margin-top:0.35rem;display:flex;flex-wrap:wrap;gap:0.3rem}
+.sk-chips .sk{font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:0.06em;color:var(--text-faint);border:1px solid rgba(255,255,255,0.12);border-radius:3px;padding:0.15rem 0.4rem}
+.sk-foot{margin-top:0.9rem;font-size:0.76rem;color:var(--text-mid);display:flex;align-items:center;gap:0.6rem}
+.sk-pulse{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);flex-shrink:0;animation:trkPulse 1.8s ease-in-out infinite}
+</style>
+<section class="slide slide-html" data-editable="true" id="skills-slide">
+  <div class="dot-overlay"></div>
+  <div class="glow glow-br"></div>
+  <div class="inner">
+    <p class="label label-peach">The 30-skill library, in plain english</p>
+    <h2>What the AIOS Skills <span class="teal">Really Do</span></h2>
+    <p style="max-width:840px; margin-top:0.5rem; font-size:0.82rem;">Not thirty buttons. Five jobs that used to need five people, and every one of them runs through the stop-the-slop pass and the AHPRA layer before a word reaches a client.</p>
+    <div class="sk-list">
+      <div class="sk-row" style="--d:0ms">
+        <span class="sk-n">01</span>
+        <div class="sk-b">
+          <h4>Your voice, captured once</h4>
+          <p class="sk-sub">Business Brain, brand guide, voice foundation, resonance messaging</p>
+          <p class="sk-p">Everything else reads from this. Your tone, your concerns, your offers and your rules live in one place, so nothing that goes out sounds like a stranger wrote it.</p>
+          <div class="sk-chips"><span class="sk">/cc-voice-foundation</span><span class="sk">/cc-brand-guide</span><span class="sk">/cc-resonance</span><span class="sk">/cc-hook</span></div>
+        </div>
+      </div>
+      <div class="sk-row" style="--d:140ms">
+        <span class="sk-n">02</span>
+        <div class="sk-b">
+          <h4>Content, written and scheduled</h4>
+          <p class="sk-sub">Content engine, reels, carousels, scripts, covers, social scheduling</p>
+          <p class="sk-p">A month of content built from your own filming, edited, captioned, covered and scheduled. You approve, it posts.</p>
+          <div class="sk-chips"><span class="sk">/cc-content-engine</span><span class="sk">/cc-script</span><span class="sk">/cc-reelclips</span><span class="sk">/cc-carousel</span><span class="sk">/cc-social</span></div>
+        </div>
+      </div>
+      <div class="sk-row" style="--d:280ms">
+        <span class="sk-n">03</span>
+        <div class="sk-b">
+          <h4>Campaigns, creative to copy</h4>
+          <p class="sk-sub">Meta and Google ad builders, ad spy, keyword research, lead forms</p>
+          <p class="sk-p">The whole campaign, not just the caption. Creative, copy, audience, budget, lead form and tracking, built and launched.</p>
+          <div class="sk-chips"><span class="sk">/cc-metaad-builder</span><span class="sk">/cc-googlead-builder</span><span class="sk">/cc-ad-spy</span><span class="sk">/cc-keyword-research</span><span class="sk">/cc-fb-leadform</span></div>
+        </div>
+      </div>
+      <div class="sk-row" style="--d:420ms">
+        <span class="sk-n">04</span>
+        <div class="sk-b">
+          <h4>The follow-up that never forgets</h4>
+          <p class="sk-sub">Newsletter engine, follow-up ladder, nurture, reactivation, thank-you pages</p>
+          <p class="sk-p">Four newsletters a month loaded, the ladder chasing every lead, and your dormant clients woken up on a schedule.</p>
+          <div class="sk-chips"><span class="sk">/cc-newsletter-engine</span><span class="sk">/cc-follow-up-agent</span><span class="sk">/cc-nurture-sequence</span><span class="sk">/cc-reactivation</span></div>
+        </div>
+      </div>
+      <div class="sk-row" style="--d:560ms">
+        <span class="sk-n">05</span>
+        <div class="sk-b">
+          <h4>Pages and agents that answer</h4>
+          <p class="sk-sub">Landing pages, website audit, SEO and GEO, Aria the conversational agent</p>
+          <p class="sk-p">Pages built to convert and found in search, and an agent answering DMs, email and missed calls at 9pm in your voice.</p>
+          <div class="sk-chips"><span class="sk">/cc-landing-page</span><span class="sk">/cc-geo-seo</span><span class="sk">/cc-website-audit</span><span class="sk">/aria-deploy</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sk-foot"><span class="sk-pulse"></span><span>The library comes home with you. You run it yourself, in your own accounts, for as long as you like.</span></div>
+  </div>
+</section>
+
 <!-- ========== WHAT WE TRACK ========== -->
 <section class="slide slide-html" data-editable="true" id="track-slide">
   <div class="dot-overlay"></div>
@@ -843,8 +916,8 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
   <div class="inner">
     <div class="split">
       <div>
-        <span class="task-num">The Website</span>
-        <h2>MOMO, Built <span class="teal">Properly</span></h2>
+        <span class="task-num">Bonus Offer</span>
+        <h2>Bonus: The MOMO <span class="teal">Website</span></h2>
         <div class="quote"><p>"I'm hoping to rebrand Momo and break it off to not be Browskii as well."</p></div>
         <ul style="list-style:none; padding:0; margin:0;">
           <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5; margin-bottom:0.35rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> The mockup is one page. This is the whole thing: a full build and overhaul for MOMO in the new burgundy and blue, separate from the brow brand, on its own domain so it stands as its own business.</li>
@@ -852,14 +925,15 @@ p { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
           <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5; margin-bottom:0.35rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> The skin assessment built in as the front door, the gated results gallery, the booking path for returning clients, and Aglow with its own page.</li>
           <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5; margin-bottom:0.35rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> Meta pixel and Google tag installed and firing, conversion tracking wired to the assessment and the booking, so every dollar you spend can finally be traced.</li>
           <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5; margin-bottom:0.35rem;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> SEO and GEO from the first line of code: titles and headings that own Newstead, schema, internal linking, page speed, and content structured so AI search can answer "where do I go for rosacea in Brisbane" with your name.</li>
-          <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> The same build we delivered for Dr Mandi and Tracey at Bonnie Lass. <a href="https://clinic-catalyst-au.github.io/browskii/momo.html" target="_blank" style="color:var(--teal-bright);">See the MOMO mockup &#8594;</a></li>
+          <li style="display:flex; gap:0.5rem; font-size:0.78rem; color:var(--text-mid); line-height:1.5;"><span style="color:var(--teal-bright); flex-shrink:0;">&#8226;</span> <a href="https://clinic-catalyst-au.github.io/browskii/momo.html" target="_blank" style="color:var(--teal-bright);">See the MOMO mockup &#8594;</a></li>
         </ul>
       </div>
       <div>
         <div class="price-card">
-          <p class="price-period">Full website build and overhaul</p>
+          <p class="price-period">Bonus &middot; full website build and overhaul</p>
           <div class="price-tag">$5,000</div>
           <p style="font-size:0.7rem; color:var(--text-faint); margin-top:0.2rem;">+ GST &middot; up to 12 screens &middot; payment plans available</p>
+          <p style="font-size:0.68rem; color:var(--teal-bright); margin-top:0.4rem; font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:0.06em;">Added to the workshop or the install, whenever you are ready</p>
           <ul class="includes-list">
             <li>Up to 12 screens, designed and built</li>
             <li>The new MOMO brand throughout</li>
@@ -960,5 +1034,6 @@ function acceptProposal() {
 (function(){var a=document.getElementById('aios-slide'); if(!a) return;
  new IntersectionObserver(function(es){es.forEach(function(e){ e.target.classList.toggle('is-live', e.isIntersecting); });},{threshold:0.3}).observe(a);})();
 </script>
+<script>(function(){var a=document.getElementById('skills-slide'); if(!a) return; new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('is-live', e.isIntersecting);});},{threshold:0.25}).observe(a);})();</script>
 </body>
 </html>
